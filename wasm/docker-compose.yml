@@ -1,0 +1,11 @@
+version: '3'
+services:
+  wasm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./src:/src
+    ports:
+      - 8000:8000
