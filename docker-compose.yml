@@ -1,0 +1,11 @@
+version: '3'
+services:
+  wasm-compiler:
+    build:
+      context: ./wasm-compiler
+      dockerfile: ../docker/wasm-compiler/Dockerfile
+    tty: true
+    volumes:
+      - ./wasm-compiler:/wasm-compiler
+    ports:
+      - 8000:8000
